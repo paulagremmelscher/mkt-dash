@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    background-color: #F4F7EE;
+    color: #1C1C1B;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-[#FAFDF5] rounded-2xl border border-[#D8E8B8] transition-shadow duration-300;
+    box-shadow: 0 1px 8px rgba(87,119,22,0.07);
+  }
+  .card:hover { box-shadow: 0 4px 24px rgba(87,119,22,0.13); }
+  .lbl   { @apply text-[10px] uppercase tracking-[0.16em] font-medium text-[#8A8A89]; }
+  .knum  { @apply text-[1.9rem] font-light leading-none text-[#1C1C1B] tracking-tight; }
+  .stitle { @apply text-base font-medium text-[#1C1C1B]; }
+  .pill-green { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-medium bg-[#EEF8D4] text-[#5D8010]; }
+  .pill-gray  { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-medium bg-[#F0F0EE] text-[#575756]; }
+  .pill-red   { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-medium bg-red-50 text-red-500; }
+  ::-webkit-scrollbar { width:4px; height:4px; }
+  ::-webkit-scrollbar-track { background:#F4F7EE; }
+  ::-webkit-scrollbar-thumb { background:#D8E8B8; border-radius:4px; }
+}
+
+.recharts-cartesian-axis-tick-value { font-family:'Roboto',sans-serif; font-size:11px; fill:#8A8A89; }
+.recharts-legend-item-text { font-family:'Roboto',sans-serif !important; font-size:12px !important; color:#575756 !important; }
